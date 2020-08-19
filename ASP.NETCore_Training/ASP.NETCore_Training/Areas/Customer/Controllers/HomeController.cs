@@ -9,6 +9,7 @@ using ASP.NETCore_Training.Models;
 
 namespace ASP.NETCore_Training.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
