@@ -1,0 +1,8 @@
+
+------------------------ Fix ----------------------------
+1	Using 'UseMvc' to configure MVC is not supported while using Endpoint Routing. 
+	To continue using 'UseMvc', please set 'MvcOptions.EnableEndpointRounting = false' inside 'ConfigureServices'
+	
+	*****	Fix starup.cs 
+			add	services.AddMvc(option => option.EnableEndpointRouting = false) .AddNewtonsoftJson(); in ConfigureServices
+
