@@ -19,8 +19,9 @@
     <table class="table table-striped border">
         <tr class="table-info">
             <th>
-                @Html.DisplayNameFor(pt=>pt.ProductType)
+                @Html.DisplayNameFor(pt => pt.ProductType)
             </th>
+            <th></th>
             <th></th>
         </tr>
 
@@ -28,7 +29,9 @@
         {
             <tr>
                 <td>@item.ProductType</td>
-                <td>Edit | Detail   | Delete</td>
+                <td>
+                    <partial name="_ButtonPartial" model="@item.Id"/>
+                </td>
             </tr>
         }
     </table>
