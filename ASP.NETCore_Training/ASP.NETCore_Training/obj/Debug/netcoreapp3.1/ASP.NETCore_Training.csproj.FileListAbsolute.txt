@@ -175,3 +175,4 @@ D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\De
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Create.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Edit.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Details.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Delete.cshtml.g.cs

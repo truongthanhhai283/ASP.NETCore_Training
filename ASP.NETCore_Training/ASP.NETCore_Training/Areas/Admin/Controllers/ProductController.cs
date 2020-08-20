@@ -126,5 +126,44 @@ namespace ASP.NETCore_Training.Areas.Admin.Controllers
             return View(product);
         }
 
+        //GET Delete Action Method
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var product = _db.Products.Include(c => c.SpecialTag).Include(c => c.ProductTypes).Where(c => c.Id == id).FirstOrDefault();
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
+        }
+
+        //POST Delete Action Method
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirm(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var product = _db.Products.FirstOrDefault(c => c.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            _db.Products.Remove(product);
+            await _db.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
