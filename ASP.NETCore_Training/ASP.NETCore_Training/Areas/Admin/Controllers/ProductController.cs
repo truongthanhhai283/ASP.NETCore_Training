@@ -107,5 +107,24 @@ namespace ASP.NETCore_Training.Areas.Admin.Controllers
 
             return View(products);
         }
+
+        //GET Details Action Method
+        public ActionResult Details(int? id)
+        {
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var product = _db.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTag)
+                .FirstOrDefault(c => c.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
+        }
+
     }
 }
