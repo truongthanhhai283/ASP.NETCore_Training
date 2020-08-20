@@ -176,3 +176,9 @@ D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\De
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Edit.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Details.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Delete.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\SpecialTag\Index.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TagPageButtonPartial.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\SpecialTag\Create.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\SpecialTag\Edit.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\SpecialTag\Details.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\SpecialTag\Delete.cshtml.g.cs
