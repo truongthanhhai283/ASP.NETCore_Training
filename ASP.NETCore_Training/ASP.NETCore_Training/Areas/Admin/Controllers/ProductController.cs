@@ -26,7 +26,7 @@ namespace ASP.NETCore_Training.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            var data = _db.Products.Include(c=>c.ProductTypes).Include(c=>c.SpecialTag).ToList();
+            var data = _db.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTag).ToList();
             return View(data);
         }
 
@@ -34,7 +34,7 @@ namespace ASP.NETCore_Training.Areas.Admin.Controllers
         public ActionResult Create()
         {
             //Create dropdown
-            ViewData["productTypeId"]=new SelectList(_db.ProductTypes.ToList(),"Id","ProductType");
+            ViewData["productTypeId"] = new SelectList(_db.ProductTypes.ToList(), "Id", "ProductType");
             ViewData["TagId"] = new SelectList(_db.SpecialTags.ToList(), "Id", "Name");
 
             return View();
@@ -44,19 +44,29 @@ namespace ASP.NETCore_Training.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Products products, IFormFile image)
         {
-            if (image!=null)
+            if (image != null)
             {
                 var name = Path.Combine(_he.WebRootPath + "/images", Path.GetFileName(image.FileName));
                 await image.CopyToAsync(new FileStream(name, FileMode.Create));
-                products.Image = "images/"+image.FileName;
+                products.Image = "images/" + image.FileName;
             }
 
-            if (image==null)
+            if (image == null)
             {
                 products.Image = "images/noimage.PNG";
             }
 
-            if(ModelState.IsValid){
+            if (ModelState.IsValid)
+            {
+                var searchProduct = _db.Products.FirstOrDefault(c => c.Name == products.Name);
+                if (searchProduct != null)
+                {
+                    ViewBag.message = "This product name is already exist";
+                    ViewData["productTypeId"] = new SelectList(_db.ProductTypes.ToList(), "Id", "ProductType");
+                    ViewData["TagId"] = new SelectList(_db.SpecialTags.ToList(), "Id", "Name");
+                    return View(products);
+                }
+
                 _db.Products.Add(products);
                 await _db.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
