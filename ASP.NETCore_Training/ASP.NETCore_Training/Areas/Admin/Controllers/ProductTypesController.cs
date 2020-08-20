@@ -42,5 +42,34 @@ namespace ASP.NETCore_Training.Areas.Admin.Controllers
             }
             return View(productTypes);
         }
+
+        //Edit GET action Method
+        public ActionResult Edit(int? id)
+        {
+            if (id==null)
+            {
+                return NotFound();
+            }
+            var productType = _db.ProductTypes.Find(id);
+            if (productType==null)
+            {
+                return NotFound();
+            }
+            return View(productType);
+        }
+
+        //Edit POST action Method
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(ProductTypes productTypes)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Update(productTypes);
+                await _db.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(productTypes);
+        }
     }
 }
