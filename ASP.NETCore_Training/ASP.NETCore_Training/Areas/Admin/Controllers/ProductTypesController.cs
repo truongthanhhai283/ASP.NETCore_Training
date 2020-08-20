@@ -38,6 +38,8 @@ namespace ASP.NETCore_Training.Areas.Admin.Controllers
             {
                 _db.ProductTypes.Add(productTypes);
                 await _db.SaveChangesAsync();
+
+                TempData["save"] = "Product type has been saved";
                 return RedirectToAction(nameof(Index));
             }
             return View(productTypes);

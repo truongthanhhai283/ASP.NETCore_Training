@@ -1,10 +1,11 @@
 ﻿@using ASP.NETCore_Training.Models
-@model IEnumerable<ProductTypes> 
+@model IEnumerable<ProductTypes>
 @{
     ViewData["Title"] = "Index";
 }
 
-<br /><br />
+<br />
+<br />
 <div class="row">
     <div class="col-6">
         <h2 class="text-info">Product Type</h2>
@@ -12,7 +13,8 @@
 
     <div class="col-6 text-right">
         <a asp-action="Create" class="btn btn-info">
-            <i class="fas fa-plus-circle"></i> New Product Type</a>
+            <i class="fas fa-plus-circle"></i> New Product Type
+        </a>
     </div>
 </div>
 <br />
@@ -31,10 +33,22 @@
             <tr>
                 <td>@item.ProductType</td>
                 <td>
-                    <partial name="_ButtonPartial" model="@item.Id"/>
+                    <partial name="_ButtonPartial" model="@item.Id" />
                 </td>
             </tr>
         }
     </table>
 </div>
 
+@section scripts{
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var save = '@TempData["save"]';
+            if (save != null) {
+                alertify.success(save)
+            }
+        })
+    </script>
+}
