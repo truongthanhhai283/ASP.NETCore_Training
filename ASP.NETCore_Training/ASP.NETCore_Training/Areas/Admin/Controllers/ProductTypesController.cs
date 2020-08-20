@@ -94,5 +94,49 @@ namespace ASP.NETCore_Training.Areas.Admin.Controllers
         {
             return RedirectToAction(nameof(Index));            
         }
+
+        //Delete GET action Method
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var productType = _db.ProductTypes.Find(id);
+            if (productType == null)
+            {
+                return NotFound();
+            }
+            return View(productType);
+        }
+
+        //Delete POST action Method
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int? id,ProductTypes productTypes)
+        {
+            if (id==null)
+            {
+                return NotFound();
+            }
+
+            if (id!=productTypes.Id)
+            {
+                return NotFound();
+            }
+
+            var productType = _db.ProductTypes.Find(id);
+            if (productType==null)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                _db.Remove(productType);
+                await _db.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(productTypes);
+        }
     }
 }
