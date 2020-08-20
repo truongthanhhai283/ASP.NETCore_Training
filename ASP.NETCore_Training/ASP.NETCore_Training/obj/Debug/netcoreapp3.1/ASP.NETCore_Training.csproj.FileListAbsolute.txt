@@ -168,3 +168,5 @@ D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\De
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ProductTypes\Create.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ButtonPartial.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ProductTypes\Edit.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.csprojAssemblyReference.cache
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ProductTypes\Details.cshtml.g.cs
