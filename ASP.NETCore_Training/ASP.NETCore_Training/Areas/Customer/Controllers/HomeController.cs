@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ASP.NETCore_Training.Models;
+using ASP.NETCore_Training.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASP.NETCore_Training.Controllers
 {
     [Area("Customer")]
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private ApplicationDbContext _db;
+
+        public HomeController(ApplicationDbContext db)
         {
-            _logger = logger;
+            _db = db;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var data = _db.Products.Include(p => p.ProductTypes).Include(s => s.SpecialTag).ToList();
+            return View(data);
         }
 
         public IActionResult Privacy()
