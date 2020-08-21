@@ -84,5 +84,39 @@ namespace ASP.NETCore_Training.Controllers
             HttpContext.Session.Set("products", products);
             return RedirectToAction(nameof(Index));
         }
+
+        //GET Remove action methdo
+        [ActionName("Remove")]
+        public IActionResult RemoveToCart(int? id)
+        {
+            List<Products> products = HttpContext.Session.Get<List<Products>>("products");
+            if (products != null)
+            {
+                var product = products.FirstOrDefault(c => c.Id == id);
+                if (product != null)
+                {
+                    products.Remove(product);
+                    HttpContext.Session.Set("products", products);
+                }
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+
+        public IActionResult Remove(int? id)
+        {
+            List<Products> products = HttpContext.Session.Get<List<Products>>("products");
+            if (products != null)
+            {
+                var product = products.FirstOrDefault(c => c.Id == id);
+                if (product != null)
+                {
+                    products.Remove(product);
+                    HttpContext.Session.Set("products", products);
+                }
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
