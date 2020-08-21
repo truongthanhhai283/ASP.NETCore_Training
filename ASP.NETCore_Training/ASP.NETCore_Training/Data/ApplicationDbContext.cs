@@ -19,5 +19,8 @@ namespace ASP.NETCore_Training.Data
         public DbSet<SpecialTag> SpecialTags { get; set; }
 
         public DbSet<Products> Products { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetails> OrderDetails { get; set; }
     }
 }

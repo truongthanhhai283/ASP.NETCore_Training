@@ -184,3 +184,4 @@ D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\De
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\SpecialTag\Delete.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Detail.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Cart.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Order\Checkout.cshtml.g.cs
