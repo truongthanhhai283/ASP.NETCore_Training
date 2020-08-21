@@ -7,6 +7,16 @@
 			add	services.AddMvc(option => option.EnableEndpointRouting = false) .AddNewtonsoftJson(); in ConfigureServices
 
 
+2.	Store does not implement IUserRoleStore<TUser> ASP.NET Core 2.1 Identity
+	
+	*****	Fix starup.cs 
+			In Startup.cs, I was missing AddRoles so
+			services.AddDefaultIdentity<PortalUser>()
+			.AddRoles<IdentityRole>()
+			.AddEntityFrameworkStores<ApplicationDbContext>();
+			
+		Note: The order is critical. AddRoles must come before AddEntityFrameworkStores
+
 
 ---------------------- Note ---------------------------
 Session and app state

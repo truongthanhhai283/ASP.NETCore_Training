@@ -12,6 +12,7 @@ using ASP.NETCore_Training.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ASP.NETCore_Training.Models;
 
 namespace ASP.NETCore_Training
 {
@@ -31,6 +32,7 @@ namespace ASP.NETCore_Training
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
 
