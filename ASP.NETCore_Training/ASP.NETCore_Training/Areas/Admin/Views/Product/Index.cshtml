@@ -34,44 +34,49 @@
 </div>
 <br />
 <div class="row">
-    <table class="table table-striped border">
-        <tr class="table-info">
-            <th>
-                @Html.DisplayNameFor(pt => pt.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(pt => pt.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(pt => pt.ProductColor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(pt => pt.IsAvailable)
-            </th>
-            <th>
-                @Html.DisplayNameFor(pt => pt.ProductTypeId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(pt => pt.SpecialTagId)
-            </th>
-            <th></th>
-            <th></th>
-        </tr>
+    <table class="table table-striped border" id="myTable">
+        <thead>
+            <tr class="table-info">
+                <th>
+                    @Html.DisplayNameFor(pt => pt.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(pt => pt.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(pt => pt.ProductColor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(pt => pt.IsAvailable)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(pt => pt.ProductTypeId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(pt => pt.SpecialTagId)
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
 
-        @foreach (var item in Model)
-        {
-    <tr>
-        <td>@item.Name</td>
-        <td>@item.Price</td>
-        <td>@item.ProductColor</td>
-        <td>@item.IsAvailable</td>
-        <td>@item.ProductTypes.ProductType</td>
-        <td>@item.SpecialTag.Name</td>
-        <td>
-            <partial name="_ButtonPartial" model="@item.Id" />
-        </td>
-    </tr>
-        }
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>@item.ProductColor</td>
+                    <td>@item.IsAvailable</td>
+                    <td>@item.ProductTypes.ProductType</td>
+                    <td>@item.SpecialTag.Name</td>
+                    <td>
+                        <partial name="_ButtonPartial" model="@item.Id" />
+                    </td>
+                </tr>
+            }
+        </tbody>
     </table>
 </div>
 
@@ -79,11 +84,34 @@
     <!-- JavaScript -->
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+
         $(function () {
             var save = '@TempData["save"]';
             if (save != null) {
                 alertify.success(save)
             }
+            var edit = '@TempData["edit"]'
+            if(edit!='') {
+                alertify.success(edit);
+            }
+            var del = '@TempData["delete"]'
+            if (del!='') {
+                alertify.error(del);
+            }
         })
     </script>
 }
+
+<style>
+    #myTable_wrapper{
+        width:100%;
+    }
+</style>
