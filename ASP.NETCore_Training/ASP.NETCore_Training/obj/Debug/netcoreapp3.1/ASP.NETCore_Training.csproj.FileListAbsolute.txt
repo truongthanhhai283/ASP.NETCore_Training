@@ -134,9 +134,6 @@ D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\bin\De
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.AssemblyInfoInputs.cache
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.AssemblyInfo.cs
-D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.csproj.CoreCompileInputs.cache
-D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.MvcApplicationPartsAssemblyInfo.cs
-D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.MvcApplicationPartsAssemblyInfo.cache
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.RazorAssemblyInfo.cache
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.RazorAssemblyInfo.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.TagHelpers.input.cache
@@ -185,3 +182,11 @@ D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\De
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Detail.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Cart.cshtml.g.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Order\Checkout.cshtml.g.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\bin\Debug\netcoreapp3.1\X.PagedList.dll
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\bin\Debug\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\bin\Debug\netcoreapp3.1\X.PagedList.Web.Common.dll
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.csproj.CoreCompileInputs.cache
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.MvcApplicationPartsAssemblyInfo.cs
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.MvcApplicationPartsAssemblyInfo.cache

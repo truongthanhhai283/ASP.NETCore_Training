@@ -1,5 +1,6 @@
 ﻿@using ASP.NETCore_Training.Models
-@model List<Products> 
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Products>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -28,4 +29,8 @@
               </div>
           }
       </div>
+
+<div>
+    @Html.PagedListPager(Model,p=>Href("~/Customer/Home/Index?page="+p),X.PagedList.Web.Common.PagedListRenderOptionsBase.PageNumbersOnly)
+</div>
 

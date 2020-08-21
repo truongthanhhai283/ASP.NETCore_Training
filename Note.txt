@@ -8,4 +8,8 @@
 
 
 
+---------------------- Note ---------------------------
 Session and app state
+pagelist	
+		X.PagedList.Web.Common.PagedListRenderOptionsBase.MinimalWithItemCountText
+		X.PagedList.Mvc.Core

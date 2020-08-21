@@ -9,6 +9,7 @@ using ASP.NETCore_Training.Models;
 using ASP.NETCore_Training.Data;
 using Microsoft.EntityFrameworkCore;
 using ASP.NETCore_Training.Utility;
+using X.PagedList;
 
 namespace ASP.NETCore_Training.Controllers
 {
@@ -23,9 +24,9 @@ namespace ASP.NETCore_Training.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? page)
         {
-            var data = _db.Products.Include(p => p.ProductTypes).Include(s => s.SpecialTag).ToList();
+            var data = _db.Products.Include(p => p.ProductTypes).Include(s => s.SpecialTag).ToList().ToPagedList(page ?? 1, 9);
             return View(data);
         }
 
