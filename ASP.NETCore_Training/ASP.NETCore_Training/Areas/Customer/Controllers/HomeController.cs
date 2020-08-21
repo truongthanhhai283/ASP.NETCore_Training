@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using ASP.NETCore_Training.Models;
 using ASP.NETCore_Training.Data;
 using Microsoft.EntityFrameworkCore;
+using ASP.NETCore_Training.Utility;
 
 namespace ASP.NETCore_Training.Controllers
 {
@@ -57,31 +58,31 @@ namespace ASP.NETCore_Training.Controllers
             return View(product);
         }
 
-        ////POST product detail acation method
-        //[HttpPost]
-        //[ActionName("Detail")]
-        //public ActionResult ProductDetail(int? id)
-        //{
-        //    List<Products> products = new List<Products>();
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
+        //POST product detail acation method
+        [HttpPost]
+        [ActionName("Detail")]
+        public ActionResult ProductDetail(int? id)
+        {
+            List<Products> products = new List<Products>();
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-        //    var product = _db.Products.Include(c => c.ProductTypes).FirstOrDefault(c => c.Id == id);
-        //    if (product == null)
-        //    {
-        //        return NotFound();
-        //    }
+            var product = _db.Products.Include(c => c.ProductTypes).FirstOrDefault(c => c.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
 
-        //    products = HttpContext.Session.Get<List<Products>>("products");
-        //    if (products == null)
-        //    {
-        //        products = new List<Products>();
-        //    }
-        //    products.Add(product);
-        //    HttpContext.Session.Set("products", products);
-        //    return RedirectToAction(nameof(Index));
-        //}
+            products = HttpContext.Session.Get<List<Products>>("products");
+            if (products == null)
+            {
+                products = new List<Products>();
+            }
+            products.Add(product);
+            HttpContext.Session.Set("products", products);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

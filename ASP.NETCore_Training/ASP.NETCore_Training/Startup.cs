@@ -33,6 +33,15 @@ namespace ASP.NETCore_Training
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            //AddSession
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             services.AddRazorPages();
 
             services.AddMvc(option => option.EnableEndpointRouting = false).AddNewtonsoftJson();
@@ -59,6 +68,8 @@ namespace ASP.NETCore_Training
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
