@@ -6,3 +6,6 @@
 	*****	Fix starup.cs 
 			add	services.AddMvc(option => option.EnableEndpointRouting = false) .AddNewtonsoftJson(); in ConfigureServices
 
+
+
+Session and app state
