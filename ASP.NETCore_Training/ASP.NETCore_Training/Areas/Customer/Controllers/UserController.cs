@@ -35,7 +35,7 @@ namespace ASP.NETCore_Training.Areas.Customer.Controllers
                 var result = await _userManager.CreateAsync(user, user.PasswordHash);
                 if (result.Succeeded)
                 {
-                    TempData["save"] = "User has been created successfully";
+                    TempData["Save"] = "User has been created successfully";
                     return RedirectToAction(nameof(Index));
                 }
                 foreach (var error in result.Errors)
