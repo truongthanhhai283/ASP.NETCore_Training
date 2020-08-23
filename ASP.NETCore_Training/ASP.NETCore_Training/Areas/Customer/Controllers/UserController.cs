@@ -3,6 +3,7 @@ using ASP.NETCore_Training.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ASP.NETCore_Training.Areas.Customer.Controllers
@@ -19,7 +20,8 @@ namespace ASP.NETCore_Training.Areas.Customer.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var data = _db.ApplicationUsers.ToList();
+            return View(data);
         }
 
         public async Task<IActionResult> Create()

@@ -231,3 +231,4 @@ D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\De
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.csproj.CoreCompileInputs.cache
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.MvcApplicationPartsAssemblyInfo.cs
 D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\ASP.NETCore_Training.MvcApplicationPartsAssemblyInfo.cache
+D:\Project\ASP.NETCore_Training\ASP.NETCore_Training\ASP.NETCore_Training\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_PartialView.cshtml.g.cs
